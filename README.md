@@ -1,6 +1,6 @@
-# 🚀 Biblioteca TypeScript com Clean Architecture
+# 🚀 Biblioteca TypeScript com Jest
 
-Este projeto tem como objetivo aprofundar os conceitos de **Clean Architecture**, aplicando-os em uma estrutura de projeto robusta e escalável, com foco na criação de um **sistema de biblioteca**. 
+Este projeto tem como objetivo aprofundar os conceitos de teste com **Jest**, aplicando-os em uma estrutura de projeto robusta e escalável, com foco na criação de um **sistema de biblioteca**.
 
 ## Funcionalidades
 A API oferece os seguintes endpoints para interação com a biblioteca:
@@ -8,6 +8,10 @@ A API oferece os seguintes endpoints para interação com a biblioteca:
 GET /books: Lista todas os livros.
 
 POST /books: Cria um novo livro.
+
+PATCH /book/:id: Edita informações separadas de um livro cadastrado.
+
+DELETE /book/:id: Deleta um livro
 
 🛠️ Conteúdo e Tecnologias
 
@@ -17,13 +21,13 @@ O projeto foi estruturado com base nos seguintes conceitos e ferramentas:
 
 * TypeScript
 
+* Jest -> Nosso framework de teste unitário
+
 * Express.js: Framework web para Node.js, utilizado para configurar o servidor e as rotas.
 
 * Uuid: Usado para gerar ids aleatórios nos livros cadastrados.
 
 * Cors
-
-* Testes com Thunder Client/Postman: As funcionalidades da API foram testadas utilizando clientes HTTP como Thunder Client ou Postman.
 
 -----
 
@@ -39,7 +43,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
   * **npm** ou **Yarn** (gerenciador de pacotes)
   * **TypeScript** (geralmente instalado junto com o Node.js ou via npm)
 
-### Instalação
+### Instalação e teste
 
 1.  **Clone o repositório:**
     ```bash
@@ -57,29 +61,22 @@ Certifique-se de ter as seguintes ferramentas instaladas:
     ```bash
     npm install
     ```
-5.  **Execute o projeto:**
+5.  **Execute o teste do projeto:**
     ```bash
-    npm run start
+    npm run test
     ```
     O servidor deverá iniciar, geralmente em `http://localhost:3000`.
 
 -----
 
-## 📸 Demonstração
+## 📸 Imagem dos sete testes inclusos. 4 unitários e 3 de integração.
 
-### Teste da Rota GET
+* ![Captura de tela 2025-07-06 180606](https://github.com/user-attachments/assets/42663a00-1f9b-494e-b519-646e7b2908c2)
 
-  * **Endpoint:** `http://localhost:3000/books`
-  * ![Captura de tela 2025-06-29 165024](https://github.com/user-attachments/assets/ba989a26-bb40-4b2d-b1a9-24a32ca8116a)
-
-
-
-### Teste da Rota POST
-
-  * **Endpoint:** `http://localhost:3000/books`
-  * ![Captura de tela 2025-06-29 164725](https://github.com/user-attachments/assets/5a9c4edf-4cfb-4a00-93fc-c7fe87136bdc)
 
 -----
+
+
 
 
 
