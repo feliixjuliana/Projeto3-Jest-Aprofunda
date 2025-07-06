@@ -12,3 +12,5 @@ app.use(cors());
 app.use(bibliotecaRoutes);
 
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+
+export default app;

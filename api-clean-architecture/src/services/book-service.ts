@@ -19,6 +19,7 @@ export default {
         const newBook = bookFactory.create({ title, bookGenres, status, exemplaryQuantity, author });
         BookStorage.add(newBook);
         return newBook;
+
     },
 
     getAllBooks: (): Book[] => {

@@ -5,7 +5,7 @@ export const createPost = (req: Request, res: Response): void => {
     const { title, bookGenres, status, exemplaryQuantity, author} = req.body;
     const newBook = bookService.createBook({title, bookGenres, status, exemplaryQuantity, author});
 
-    res.status(201).json({message: `New book, ${newBook.title}, created!!`})
+    res.status(201).json({message: `New book, ${newBook.title}, created!!`, id: newBook.id})
 }
 
 export const listPosts = (req: Request, res: Response): void => {
@@ -22,12 +22,12 @@ export const updatePost = (req: Request, res: Response): void => {
         return;
     }
 
-    res.json({message: `Book com id:${id} editado com sucesso!!`});
+    res.status(200).json({message: `Book com id:${id} editado com sucesso!!`});
 }
 
 export const deletePost = (req: Request, res: Response): void => {
     const { id } = req.params;
     const filteredBooks = bookService.deleteBookById(id);
     
-    res.json({message: `Texto com id:${id} excluído com sucesso`})
+    res.status(204).json({message: `Texto com id:${id} excluído com sucesso`})
 }
