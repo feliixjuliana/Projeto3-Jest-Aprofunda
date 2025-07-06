@@ -65,7 +65,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
     ```bash
     npm run test
     ```
-    O servidor deverá iniciar, geralmente em `http://localhost:3000`.
 
 -----
 
