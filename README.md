@@ -69,7 +69,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 -----
 
-## 📸 Imagem dos sete testes inclusos. 4 unitários e 3 de integração.
+## 📸 Imagem dos sete testes inclusos: 4 unitários e 3 de integração.
 
 * ![Captura de tela 2025-07-06 180606](https://github.com/user-attachments/assets/42663a00-1f9b-494e-b519-646e7b2908c2)
 
