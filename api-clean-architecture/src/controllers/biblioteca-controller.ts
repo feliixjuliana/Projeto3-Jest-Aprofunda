@@ -1,0 +1,33 @@
+import {Request, Response} from 'express';
+import bookService from '../services/book-service';
+
+export const createPost = (req: Request, res: Response): void => {
+    const { title, bookGenres, status, exemplaryQuantity, author} = req.body;
+    const newBook = bookService.createBook({title, bookGenres, status, exemplaryQuantity, author});
+
+    res.status(201).json({message: `New book, ${newBook.title}, created!!`})
+}
+
+export const listPosts = (req: Request, res: Response): void => {
+    const books = bookService.getAllBooks();
+    res.json(books);
+}
+
+export const updatePost = (req: Request, res: Response): void => {
+    const {id} = req.params;
+    const updatedBook = bookService.updateBook(id, req.body);
+
+    if(!updatedBook) {
+        res.status(404).json({message: `Book com ${id} não encontrado`});
+        return;
+    }
+
+    res.json({message: `Book com id:${id} editado com sucesso!!`});
+}
+
+export const deletePost = (req: Request, res: Response): void => {
+    const { id } = req.params;
+    const filteredBooks = bookService.deleteBookById(id);
+    
+    res.json({message: `Texto com id:${id} excluído com sucesso`})
+}
